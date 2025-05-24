@@ -9,6 +9,10 @@ on:
     branches:
       - "main"
 
+permissions:
+  packages: write
+  contents: read
+
 env:
   # renovate: datasource=github-releases depName=tailscale/tailscale
   TAILSCALE_VERSION: v1.84.0
@@ -53,7 +57,7 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
 
-      - name: Build and push Arc
+      - name: Build and push
         id: build
         uses: docker/build-push-action@v6
         with:
