@@ -22,7 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: tailscale/tailscale@${{ env.TAILSCALE_VERSION }}
+          repository: tailscale/tailscale
+          ref: ${{ env.TAILSCALE_VERSION }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
