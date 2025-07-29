@@ -15,7 +15,7 @@ permissions:
 
 env:
   # renovate: datasource=github-releases depName=tailscale/tailscale
-  TAILSCALE_VERSION: v1.84.0
+  TAILSCALE_VERSION: v1.86.0
 
 concurrency:
   group: ${{ github.ref_name || 'ci' }}
